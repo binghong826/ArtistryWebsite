@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Serif TC', sans-serif; 
+}
+html{
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+html::-webkit-scrollbar {
+    display: none;
+}
+
+:root{
+    --main-color: #E5BB7B;
+    --white-color: #f9f6f0;
+    --light-gray-color: #dce2e2;
+    --gray-color: #777;
+    --dark-gray-color: #454444;
+    --shadow-normal: 0 10px 6px -6px #777;
+    --card-height: 300px;
+    --card-width: 150px;
+}
+a{
+    text-decoration: none;
+    color: var(--gray-color);
+}
+
+.btn1 {
+    background-color: var(--main-color); /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    margin-right: 20px;
+  }
+.card{
+    width: var(--card-width);
+    height: var(--card-height);
+    background: var(--dark-gray-color);
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 0 36px;
+    perspective: 2500px;
+    margin-left: 20px;
+}
+.card_num{
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
+}
+#myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+#myBtn:hover {
+background: #ddd;
+color: black;
+}
+.arrow_content{
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+.space{
+    width: 200px;
+}
+video::-webkit-media-controls-play-button {
+    display: none;
+}
+video::-webkit-media-controls-play-button {
+    display: none !important;
+    -webkit-appearance: none;}
+.arrow_contorl_content{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, .5);
+}
+.arrow_function,
+#arrow{
+    margin: 0 auto;
+    font-size: 40px;
+}
+.material-symbols-outlined{
+    margin-right: 10px;
+}
+.nav_continer{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid var(--dark-gray-color); */
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+    .nav_logo{
+        color: var(--gray-color);
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+    }
+        .nav_logo_img{
+            width: 200px;
+            /* height: 40px; */
+        }
+        .nav_logo_img img{
+            width: 100%;
+            height: 100%;
+        }
+    .nav_btn ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+        .nav_btn ul li{
+            min-width: 100px;
+            list-style: none;
+        }
+            .nav_btn ul li a{
+                /* padding: 1em; */
+                width: 100%;
+                height: 100%;
+                display: flex;
+                text-decoration: none;
+                color: var(--gray-color);
+                position: relative;
+            }
+            .nav_btn ul li a::before{
+                content: '';
+                position: absolute;
+                
+                z-index: 1;
+                /* left: -3em; */
+                top: 1.5rem;
+                bottom: 0;
+                margin: auto;
+                background: var(--gray-color);
+                width: 60px;
+                height: 1.5px;
+                transition: .3s;
+            }
+            .nav_btn ul li a:hover{
+                color: var(--main-color);
+                transition: .3s;
+            }
+            .nav_btn ul li a:hover::before{
+                width: 5px;
+                transition: .3s;
+                background: var(--main-color);
+            }
+            .showmenu {
+                display: none;
+              }
+   .pic_continer,.video_continer,.head_continer,.scroll_continer{
+        width: 100%;
+        height: 80vh;
+        align-content: center;
+        margin-bottom: 50px;
+        position: relative;
+    }  
+    .video_content{
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+    }
+    video[poster]{
+        object-fit: cover;
+    }      
+    .head_content,.scroll_content{
+        width: 80%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .helf{
+        width: 50%;
+        height: 100%;
+        display: grid;
+        align-content: center;
+        overflow-x: scroll;
+        /* padding-left: 20px; */
+    }
+        .helf_info p{
+            margin-top: 10px;
+        }
+        .helf_func_content{
+            margin-top: 20px;
+        }
+        .card_content{
+            /* width: 100%; */
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            position: relative;
+            /* overflow-x: scroll; */
+        }
+        /* .scroll_text{
+            position: absolute;
+            bottom: 0;
+            right: 9rem;    
+        } */
+        .helf::-webkit-scrollbar {
+            display: none;
+          }
+    #myVideo {
+        /* position: fixed; */
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+      }
+      main {
+        width: 60%;
+        margin: 1em auto;
+        columns: 200px;
+        column-gap: 10px;
+        margin-top: 200px;
+      }
+      main img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+
+/* RWD Phone */
+@media (max-width: 768px) {
+    html{
+        overflow-x: hidden;
+        width: 100%;
+    }
+    .nav_continer{
+        width: 100%;
+        padding: 0;
+    }
+    .nav_logo_img{
+        width: 125px;
+        /* height: 40px; */
+    }
+    .space{
+        width: 125px;
+    }
+
+    .btn1 {
+        margin-top: 20px;
+      }
+    .arrow_contorl_content{
+       
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .showmenu {
+    display: block;
+    color: var(--dark-gray-color);
+    padding: 1em;
+    text-decoration: none;
+    }
+    .nav_btn{
+        /* 隱藏選單 */
+        max-height: 0px;
+        overflow: hidden;
+        /* 取消 display: flex; */
+        display: flex;
+        /* 設定絕對定位 */
+        position: absolute;
+        top: 81px;
+        /* 選單滿版呈現，也可以設定 left:0; right:0; */
+        width: 100%;
+        text-align: center;
+        background: #FFF;
+        transition: max-height .8s;
+    }
+    .nav_btn ul{
+        flex-direction: column;
+        width: 100%;
+    }
+    .nav_btn li {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        margin-left: 0;
+
+    }
+    
+    .nav_btn li a{
+        width: 100%;
+        transition: all .3s;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .nav_btn li a:hover {
+        background: var(--gray-color);
+        color: #fff;
+    }
+    .nav_btn ul li a::before{
+        display: none;
+       
+    }
+    .show_content{
+        width: 100%;
+
+    }
+    .menu-show .nav_btn {
+        max-height: 500px;
+        z-index: 100;
+    }
+   
+    .arrow_content{
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .video_continer{
+        height: 26vh;
+        
+    }  
+
+    .scroll_content{
+        flex-direction: column;
+    }
+    /* .scroll_text{
+      bottom: 17rem;
+      right: 11rem;
+    } */
+        .helf{
+            width: 100%;
+            
+        }
+           
+          main {
+            width: 90%;
+            margin: 0 auto;
+            columns: 2;
+            column-gap: 20px;
+          }
+          main img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+          }
+    #myBtn {
+    width: 125px;
+    font-size: 14px;
+   
+    }
+    
+}
